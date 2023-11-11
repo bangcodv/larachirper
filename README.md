@@ -10,3 +10,4 @@
 - php artisan breeze:install blade
 - npm run dev
 - php artisan migrate:fresh  => to rebuild database migration from scracch
+- php artisan make:policy ChirpPolicy --model=Chirp => to make policy.
