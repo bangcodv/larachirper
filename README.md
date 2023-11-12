@@ -11,3 +11,7 @@
 - npm run dev
 - php artisan migrate:fresh  => to rebuild database migration from scracch
 - php artisan make:policy ChirpPolicy --model=Chirp => to make policy.
+- php artisan make:notification NewChirp => to make notification
+- php artisan make:event ChirpCreated => create an event
+- php artisan make:listener SendChirpCreatedNotifications --event=ChirpCreated => creating event listener
+
