@@ -15,3 +15,11 @@
 - php artisan make:event ChirpCreated => create an event
 - php artisan make:listener SendChirpCreatedNotifications --event=ChirpCreated => creating event listener
 
+
+## livewire artisan command
+- php artisan make:volt chirps/list --class -> to create new livewire component.
+- php artisan make:volt chirps/list --class -> to create a new chirps list, livewire component
+- php artisan make:volt chirps/edit --class
+
+
+
