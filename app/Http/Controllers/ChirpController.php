@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
-// use App\Models\Chirp;
-// use Illuminate\Http\Request;
+use App\Models\Chirp;
+use Illuminate\Http\Request;
 // use Illuminate\Htpp\Response;
-use Illuminate\View\View;
-// use Illuminate\Http\RedirectResponse;
+// use Illuminate\View\View;
+use Illuminate\Http\RedirectResponse;
+use Inertia\Inertia;
+use Inertia\Response;
 
 class ChirpController extends Controller
 {
@@ -14,14 +16,11 @@ class ChirpController extends Controller
      * Display a listing of the resource.
      */
     // public function index(): Response
-    public function index(): View
+    public function index(): Response
     {
-       return view('chirps',[
-
-       ]); 
-        // return view('chirps.index',[
-        //     'chirps'=>Chirp::with('user')->latest()->get(),
-        // ]);
+       return Inertia::render('Chirps/Index',[
+        'chirps'=>Chirp::with('user:id,name')->latest()->get(),
+       ]);
     }
 
     /**
